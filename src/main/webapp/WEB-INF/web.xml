@@ -4,12 +4,69 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+  <context-param>
+    <param-name>name</param-name>
+    <param-value>jjj</param-value>
+  </context-param>
+
+  <!-- servlet01 -->
   <servlet>
     <servlet-name>servlet01</servlet-name>
     <servlet-class>com.dh.servlet.Servlet01</servlet-class>
   </servlet>
+
+  <!-- servlet02 -->
+  <servlet>
+    <servlet-name>servlet02</servlet-name>
+    <servlet-class>com.dh.servlet.Servlet02</servlet-class>
+    <init-param>
+      <param-name>name</param-name>
+      <param-value>Jack</param-value>
+    </init-param>
+    <init-param>
+      <param-name>age</param-name>
+      <param-value>11</param-value>
+    </init-param>
+  </servlet>
+
+  <!-- servlet03 -->
+  <servlet>
+    <servlet-name>servlet03</servlet-name>
+    <servlet-class>com.dh.servlet.Servlet03</servlet-class>
+    <init-param>
+      <param-name>name</param-name>
+      <param-value>Jack</param-value>
+    </init-param>
+    <init-param>
+      <param-name>age</param-name>
+      <param-value>11</param-value>
+    </init-param>
+  </servlet>
+
+  <!-- servlet04 -->
+  <servlet>
+    <servlet-name>servlet04</servlet-name>
+    <servlet-class>com.dh.servlet.Servlet04</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>servlet01</servlet-name>
     <url-pattern>/servlet01</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>servlet02</servlet-name>
+    <url-pattern>/servlet02</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>servlet03</servlet-name>
+    <url-pattern>/servlet03</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>servlet04</servlet-name>
+    <url-pattern>/servlet04</url-pattern>
   </servlet-mapping>
 </web-app>
