@@ -1,5 +1,6 @@
 package com.dh.servlet;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,19 +20,24 @@ public class Servlet04 extends HttpServlet {
         while (en.hasMoreElements()){
             String names = (String) en.nextElement();
         }
-
-        Map map = new HashMap();
-        map = req.getParameterMap();
+        //获取所有参数集合
+        Map map = req.getParameterMap();
         Iterator<Map.Entry<String,String>> iterator = map.entrySet().iterator();
         while (iterator.hasNext()){
             Map.Entry<String,String> entry = iterator.next();
             System.out.println(entry.getKey());
         }
+        //通过key获取key所对应的所有value
         String[] strings = req.getParameterValues("name");
         int size = Array.getLength(strings);
         for (int i = 0;i<size;i++){
             System.out.println(strings[i]);
         }
+        //转发
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/servlet03");
+        requestDispatcher.forward(req,resp);
+        //重定向
+        //resp.sendRedirect("/servlet_01_javaweb_war/servlet03");
     }
 
 }

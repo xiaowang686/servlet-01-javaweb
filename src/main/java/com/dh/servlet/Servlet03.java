@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.Enumeration;
 
 public class Servlet03 extends HttpServlet {
@@ -37,9 +39,14 @@ public class Servlet03 extends HttpServlet {
 
         //String path = "conf.properties";
         //String path = "/conf.properties";
-        String path = Servlet03.class.
-                getClassLoader().getResource("conf.properties").getPath();
-        System.out.println(path);
+//        String path = Servlet03.class.
+//                getClassLoader().getResource("conf.properties").getPath();
+//        System.out.println(path);
+        //输出页面乱码问题
+        resp.setContentType("text/html;charset=UTF-8");
+        PrintWriter writer = resp.getWriter();
+        writer.print("你好");
 
     }
+
 }
