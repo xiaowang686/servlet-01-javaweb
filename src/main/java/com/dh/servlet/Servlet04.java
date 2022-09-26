@@ -33,6 +33,7 @@ public class Servlet04 extends HttpServlet {
         for (int i = 0;i<size;i++){
             System.out.println(strings[i]);
         }
+        req.setAttribute("info",strings);
         //转发
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("/servlet03");
         requestDispatcher.forward(req,resp);
