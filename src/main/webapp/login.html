@@ -5,14 +5,32 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/servlet_01_javaweb_war/servlet04" method="get">
-    姓名：<input name="name" type="text"><br>
-    性别：<input name="sex" type="text"><br>
-    爱好：
-    打游戏<input name="hobby" type="checkbox" value="打游戏">
-    看电影<input name="hobby" type="checkbox" value="看电影">
-    睡觉<input name="hobby" type="checkbox" value="睡觉"><br>
-    <input type="submit" value="提交">
+<form action="/servlet_01_javaweb_war/servlet05" method="post">
+        <fieldset>
+            用户名：
+            <br />
+            <input type="text" name="name" size="30" maxlength="100" />
+            <br />
+            年龄：
+            <br />
+            <input type="text" name="age" size="30" maxlength="100" />
+            <br />
+            出生日期：
+            <br />
+            <input type="date" name="birthday" />
+            <br />
+            爱好：
+            <br />
+            <input type="checkbox" name="favorite" value="music" checked />音乐
+            <input type="checkbox" name="favorite" value="movie" checked />电影
+            <input type="checkbox" name="favorite" value="football" />足球
+            <input type="checkbox" name="favorite" value="basketball" />篮球
+            <br />
+            <input type="checkbox" name="accept" value="ture" checked />接受协议
+            <br />
+            <br />
+            <input type="submit" value="submit" />
+        </fieldset>
 </form>
 </body>
 </html>
