@@ -1,0 +1,72 @@
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:22) ]
+INFO:901
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:23) ]
+INFO:东东
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:24) ]
+INFO:男
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:22) ]
+INFO:902
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:23) ]
+INFO:张老二
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:24) ]
+INFO:男
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:22) ]
+INFO:903
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:23) ]
+INFO:张三
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:24) ]
+INFO:女
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:22) ]
+INFO:904
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:23) ]
+INFO:李四
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:24) ]
+INFO:男
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:22) ]
+INFO:905
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:23) ]
+INFO:王五
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:24) ]
+INFO:女
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:22) ]
+INFO:906
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:23) ]
+INFO:王六
+2022-10-09 14:10:12 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:24) ]
+INFO:男
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:21) ]
+INFO:901
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:22) ]
+INFO:东东
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:23) ]
+INFO:男
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:21) ]
+INFO:902
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:22) ]
+INFO:张老二
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:23) ]
+INFO:男
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:21) ]
+INFO:903
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:22) ]
+INFO:张三
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:23) ]
+INFO:女
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:21) ]
+INFO:904
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:22) ]
+INFO:李四
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:23) ]
+INFO:男
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:21) ]
+INFO:905
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:22) ]
+INFO:王五
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:23) ]
+INFO:女
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:21) ]
+INFO:906
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:22) ]
+INFO:王六
+2022-10-09 15:00:20 下午 [Thread: main][ Class:com.dh.jdbc.JDBC01 >> Method: com.dh.jdbc.JDBC01.main(JDBC01.java:23) ]
+INFO:男

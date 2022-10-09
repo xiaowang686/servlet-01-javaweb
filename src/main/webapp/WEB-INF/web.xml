@@ -3,12 +3,6 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
-
-  <context-param>
-    <param-name>name</param-name>
-    <param-value>jjj</param-value>
-  </context-param>
 
   <!-- servlet01 -->
   <servlet>
@@ -50,6 +44,12 @@
     <servlet-class>com.dh.servlet.Servlet04</servlet-class>
   </servlet>
 
+  <!-- servlet05 -->
+  <servlet>
+    <servlet-name>servlet05</servlet-name>
+    <servlet-class>com.dh.servlet.Servlet05</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>servlet01</servlet-name>
     <url-pattern>/servlet01</url-pattern>
@@ -69,4 +69,14 @@
     <servlet-name>servlet04</servlet-name>
     <url-pattern>/servlet04</url-pattern>
   </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>servlet05</servlet-name>
+    <url-pattern>/servlet05</url-pattern>
+  </servlet-mapping>
+
+  <!--    设置欢迎页面-->
+  <welcome-file-list>
+    <welcome-file>checkLogin</welcome-file>
+  </welcome-file-list>
 </web-app>
