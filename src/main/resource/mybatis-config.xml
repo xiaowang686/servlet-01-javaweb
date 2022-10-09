@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
 
     <properties resource="jdbc.properties"/>
-
     <typeAliases>
         <package name="com.dh.entity"/>
     </typeAliases>
@@ -19,8 +21,9 @@
             </dataSource>
         </environment>
     </environments>
-    <!--    ??Mapper.xml??-->
+    <!--    引入Mapper.xml文件-->
     <mappers>
-        <mapper resource="mapper/ProductsMapper.xml"/>
+        <mapper resource="mapper/StudentMapper.xml"/>
     </mappers>
+
 </configuration>
