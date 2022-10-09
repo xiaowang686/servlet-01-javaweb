@@ -2,7 +2,10 @@ package com.dh.servlet;
 
 import com.dh.entity.User;
 
+<<<<<<< HEAD
 import javax.servlet.RequestDispatcher;
+=======
+>>>>>>> origin/master
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,14 +19,21 @@ public class Servlet05 extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+<<<<<<< HEAD
         this.doPost(req,resp);
     }
+=======
+        super.doGet(req, resp);
+    }
+
+>>>>>>> origin/master
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = new User();
         Date date ;
         SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM--dd");
         try {
+<<<<<<< HEAD
             String name = req.getParameter("name");
             int age = Integer.parseInt(req.getParameter("age"));
             String address = req.getParameter("address");
@@ -48,5 +58,19 @@ public class Servlet05 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+=======
+        String name = req.getParameter("name");
+        int age = Integer.parseInt(req.getParameter("age"));
+        String address = req.getParameter("address");
+        date = sdf.parse(req.getParameter("birthday"));
+        String[] hobby = req.getParameterValues("hobby");
+        user.setName(name);
+        user.setAge(age);
+        user.setAddress(address);
+        user.setBirthday(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+>>>>>>> origin/master
     }
 }
