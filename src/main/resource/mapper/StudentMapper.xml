@@ -5,12 +5,18 @@
 <mapper namespace="mapper">
     <!--    ??sql??-->
     <select id="selectStudentAll" resultType="com.dh.entity.Student">
-        select * from student
+        select * from student;
     </select>
     <select id="selectStudentById" parameterType="int" resultType="com.dh.entity.Student">
         select * from Student where id = #{id};
     </select>
+    <select id="selectStudentByName" resultType="com.dh.entity.Student">
+        select * from Student where username=#{username};
+    </select>
+    <select id="selectStudentByPassword" resultType="com.dh.entity.Student">
+        select * from Student where password=#{password};
+    </select>
     <insert id="insertStudent" parameterType="com.dh.entity.Student" keyProperty="id" useGeneratedKeys="true">
-        insert into student (id,name,sex,birthday,department,address) values (#{id},#{name},#{sex},#{birthday},#{department},#{address})
+        insert into student (id,name,sex,birthday,department,address) values (#{id},#{name},#{sex},#{birthday},#{department},#{address});
     </insert>
 </mapper>
