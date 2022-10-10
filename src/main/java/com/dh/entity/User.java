@@ -1,43 +1,41 @@
 package com.dh.entity;
 
-import java.util.Arrays;
 import java.util.Date;
 
 public class User {
 
-    private String name;
-    private Integer age;
+    private Integer id;
+    private String username;
     private Date birthday;
+    private String sex;
     private String address;
-    private String[] hobby;
-    private boolean accept;
 
     public User() {
+
     }
 
-    public User(String name, Integer age, Date birthday, String address, String[] hobby, boolean accept) {
-        this.name = name;
-        this.age = age;
+    public User(Integer id, String username, Date birthday, String sex, String address) {
+        this.id = id;
+        this.username = username;
         this.birthday = birthday;
+        this.sex = sex;
         this.address = address;
-        this.hobby = hobby;
-        this.accept = accept;
     }
 
-    public String getName() {
-        return name;
+    public Integer getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getUsername() {
+        return username;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Date getBirthday() {
@@ -48,6 +46,14 @@ public class User {
         this.birthday = birthday;
     }
 
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
     public String getAddress() {
         return address;
     }
@@ -56,31 +62,14 @@ public class User {
         this.address = address;
     }
 
-    public String[] getHobby() {
-        return hobby;
-    }
-
-    public void setHobby(String[] hobby) {
-        this.hobby = hobby;
-    }
-
-    public boolean isAccept() {
-        return accept;
-    }
-
-    public void setAccept(boolean accept) {
-        this.accept = accept;
-    }
-
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
+                "id=" + id +
+                ", username='" + username + '\'' +
                 ", birthday=" + birthday +
+                ", sex='" + sex + '\'' +
                 ", address='" + address + '\'' +
-                ", hobby=" + Arrays.toString(hobby) +
-                ", accept=" + accept +
                 '}';
     }
 }

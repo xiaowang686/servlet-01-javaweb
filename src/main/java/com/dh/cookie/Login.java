@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet("/login")
 public class Login extends HttpServlet {
 
     private static Logger logger = Logger.getLogger(Login.class);

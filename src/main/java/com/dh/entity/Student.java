@@ -1,5 +1,6 @@
 package com.dh.entity;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class Student {
@@ -10,6 +11,7 @@ public class Student {
     private Date birthday;
     private String department;
     private String address;
+    private int[] ids;
 
     public Student() {
 
@@ -72,6 +74,14 @@ public class Student {
         this.address = address;
     }
 
+    public int[] getIds() {
+        return ids;
+    }
+
+    public void setIds(int[] ids) {
+        this.ids = ids;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -81,6 +91,7 @@ public class Student {
                 ", birthday=" + birthday +
                 ", department='" + department + '\'' +
                 ", address='" + address + '\'' +
+                ", ids=" + Arrays.toString(ids) +
                 '}';
     }
 }
