@@ -21,8 +21,11 @@ public class MybatisUtil {
     public static SqlSession getSession(){
         return sqlSessionFactory.openSession();
     }
+<<<<<<< HEAD
 
     public static Object getMapper(Class clazz){
         return sqlSessionFactory.openSession().getMapper(clazz);
     }
+=======
+>>>>>>> origin/master
 }

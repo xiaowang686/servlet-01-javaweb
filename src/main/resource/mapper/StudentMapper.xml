@@ -2,52 +2,15 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
-<mapper namespace="com.dh.dao.StudentDao">
-
-    <resultMap id="orders_resultMap" type="com.dh.entity.Orders">
-        <!--        orders???-->
-        <id column="id" property="id"/>
-        <result column="user_id" property="user_id"/>
-        <result column="number" property="number"/>
-        <result column="createtime" property="createtime"/>
-        <result column="note" property="note"/>
-        <!--        ???user???-->
-        <association property="user" javaType="com.dh.entity.User">
-            <id column="uid" property="id"/>
-            <result column="username" property="username"/>
-            <result column="birthday" property="birthday"/>
-            <result column="sex" property="sex"/>
-            <result column="address" property="address"/>
-        </association>
-    </resultMap>
-
+<mapper namespace="mapper">
     <!--    ??sql??-->
     <select id="selectStudentAll" resultType="com.dh.entity.Student">
-        select * from student;
+        select * from student
     </select>
-
-    <select id="selectForeach" parameterType="Student" resultType="com.dh.entity.Student">
-        select * from Students
-        <where>
-            <if test="ids!=null">
-                <foreach collection="ids" open="id in(" separator="," close= ")" item="id">
-                    #{id}
-                </foreach>
-            </if>
-        </where>
+    <select id="selectStudentById" parameterType="int" resultType="com.dh.entity.Student">
+        select * from Student where id = #{id};
     </select>
-
-    <select id="selectStudentByName" resultType="com.dh.entity.Students">
-        select * from Student where username=#{username} and password = #{password};
-    </select>
-
-    <select id="selectByOrderId" parameterType="int" resultMap="orders_resultMap">
-        SELECT u.username,u.address,o.* FROM orders o JOIN `user` u ON o.`user_id` = u.`id` WHERE o.`id` = #{id};
-    </select>
-
     <insert id="insertStudent" parameterType="com.dh.entity.Student" keyProperty="id" useGeneratedKeys="true">
-        insert into student (id,name,sex,birthday,department,address) values (#{id},#{name},#{sex},#{birthday},#{department},#{address});
+        insert into student (id,name,sex,birthday,department,address) values (#{id},#{name},#{sex},#{birthday},#{department},#{address})
     </insert>
-
 </mapper>
