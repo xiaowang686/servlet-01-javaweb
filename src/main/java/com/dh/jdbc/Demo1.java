@@ -30,7 +30,7 @@ public class Demo1 extends Thread{
 //            sqlSession.insert("insertStudent",student);
 //            sqlSession.commit();
 
-            List<Student> lists = sqlSession.selectList("selectStudentAll",2);
+            List<Student> lists = sqlSession.selectList("selectStudentAll");
             for (Student list:lists){
                 System.out.println(list);
             }
