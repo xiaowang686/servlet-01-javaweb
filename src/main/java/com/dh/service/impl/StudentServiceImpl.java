@@ -41,8 +41,8 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public User selectOrder(int id) {
-        User user = studentDao.selectOrder(id);
-        return user;
+    public Orders selectOrder(int id) {
+        Orders orders = studentDao.selectOrder(id);
+        return orders;
     }
 }

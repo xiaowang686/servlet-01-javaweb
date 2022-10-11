@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.dh.dao.StudentDao">
-    <!--????asscociation-->
+    <!--一对一用asscociation-->
         <resultMap id="orders_resultMap" type="com.dh.entity.Orders" autoMapping="true">
             <id column="oid" property="id"/>
             <association property="user" javaType="com.dh.entity.User" autoMapping="true">
@@ -12,19 +12,20 @@
         </association>
     </resultMap>
 
-    <!-- ????collection -->
+    <!-- 一对多用collection -->
     <resultMap id="user_resultMap" type="com.dh.entity.User" autoMapping="true">
         <id column="uid" property="id"/>
         <collection property="ordersList" ofType="com.dh.entity.Orders" autoMapping="true">
         </collection>
     </resultMap>
-    
+
+    <!-- 嵌套查询-->
     <resultMap id="order_rm" type="com.dh.entity.Orders" autoMapping="true">
         <id column="id" property="id"/>
-        <collection property="user" column="user_id" select="selectUser" ofType="com.dh.entity.User"/>
+        <association property="user" column="user_id" select="selectUser" />
     </resultMap>
     
-    <!--    ??sql??-->
+    <!-- 查询所有-->
     <select id="selectStudentAll" resultType="com.dh.entity.Student" >
         select * from student;
     </select>
@@ -40,23 +41,26 @@
         </where>
     </select>
 
+    <!-- 查询用户名密码-->
     <select id="selectStudentByName" resultType="com.dh.entity.Students">
         select * from Student where username=#{username} and password = #{password};
     </select>
 
+    <!-- 一对一查询-->
     <select id="selectByOrderId" parameterType="int" resultMap="orders_resultMap">
         SELECT u.*,o.*,u.id uid,o.id oid FROM orders o JOIN `user` u ON o.`user_id` = u.`id` WHERE o.`id` = #{id};
     </select>
 
+    <!-- 一对多查询-->
     <select id="selectUserById" resultMap="user_resultMap">
         select u.*,o.*,u.id uid,o.id oid from orders o join user u on o.user_id = u.id where u.id = #{id}
     </select>
 
+    <!-- 嵌套查询-->
     <select id="selectOrder" resultMap="order_rm">
-        select user_id from user where id = #{id}
+        select user_id from orders where id = #{id}
     </select>
-
-    <select id="selectUser" resultMap="user">
+    <select id="selectUser" resultType="com.dh.entity.User">
         select * from user where id = #{id}
     </select>
     

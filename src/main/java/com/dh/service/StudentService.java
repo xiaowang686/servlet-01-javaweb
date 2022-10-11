@@ -17,5 +17,5 @@ public interface StudentService {
 
     User selectUserById(int id);
 
-    User selectOrder(int id);
+    Orders selectOrder(int id);
 }
