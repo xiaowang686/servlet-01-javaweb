@@ -2,15 +2,66 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mapper">
+
+<mapper namespace="com.dh.dao.StudentDao">
+    <!--????asscociation-->
+        <resultMap id="orders_resultMap" type="com.dh.entity.Orders" autoMapping="true">
+            <id column="oid" property="id"/>
+            <association property="user" javaType="com.dh.entity.User" autoMapping="true">
+            <id column="uid" property="id"/>
+        </association>
+    </resultMap>
+
+    <!-- ????collection -->
+    <resultMap id="user_resultMap" type="com.dh.entity.User" autoMapping="true">
+        <id column="uid" property="id"/>
+        <collection property="ordersList" ofType="com.dh.entity.Orders" autoMapping="true">
+        </collection>
+    </resultMap>
+    
+    <resultMap id="order_rm" type="com.dh.entity.Orders" autoMapping="true">
+        <id column="id" property="id"/>
+        <collection property="user" column="user_id" select="selectUser" ofType="com.dh.entity.User"/>
+    </resultMap>
+    
     <!--    ??sql??-->
-    <select id="selectStudentAll" resultType="com.dh.entity.Student">
-        select * from student
+    <select id="selectStudentAll" resultType="com.dh.entity.Student" >
+        select * from student;
     </select>
-    <select id="selectStudentById" parameterType="int" resultType="com.dh.entity.Student">
-        select * from Student where id = #{id};
+
+    <select id="selectForeach" parameterType="Student" resultType="com.dh.entity.Student">
+        select * from Students
+        <where>
+            <if test="ids!=null">
+                <foreach collection="ids" open="id in(" separator="," close= ")" item="id">
+                    #{id}
+                </foreach>
+            </if>
+        </where>
     </select>
+
+    <select id="selectStudentByName" resultType="com.dh.entity.Students">
+        select * from Student where username=#{username} and password = #{password};
+    </select>
+
+    <select id="selectByOrderId" parameterType="int" resultMap="orders_resultMap">
+        SELECT u.*,o.*,u.id uid,o.id oid FROM orders o JOIN `user` u ON o.`user_id` = u.`id` WHERE o.`id` = #{id};
+    </select>
+
+    <select id="selectUserById" resultMap="user_resultMap">
+        select u.*,o.*,u.id uid,o.id oid from orders o join user u on o.user_id = u.id where u.id = #{id}
+    </select>
+
+    <select id="selectOrder" resultMap="order_rm">
+        select user_id from user where id = #{id}
+    </select>
+
+    <select id="selectUser" resultMap="user">
+        select * from user where id = #{id}
+    </select>
+    
     <insert id="insertStudent" parameterType="com.dh.entity.Student" keyProperty="id" useGeneratedKeys="true">
-        insert into student (id,name,sex,birthday,department,address) values (#{id},#{name},#{sex},#{birthday},#{department},#{address})
+        insert into student (id,name,sex,birthday,department,address) values (#{id},#{name},#{sex},#{birthday},#{department},#{address});
     </insert>
+
 </mapper>

@@ -2,9 +2,9 @@ package com.dh.service.impl;
 
 import com.dh.dao.StudentDao;
 import com.dh.entity.Orders;
-import com.dh.entity.OrdersUser;
 import com.dh.entity.Student;
 import com.dh.entity.Students;
+import com.dh.entity.User;
 import com.dh.service.StudentService;
 import com.dh.util.MybatisUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -29,8 +29,20 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public OrdersUser selectByOrderId(int id) {
-        OrdersUser orders = studentDao.selectByOrderId(id);
+    public Orders selectByOrderId(int id) {
+        Orders orders = studentDao.selectByOrderId(id);
         return orders;
+    }
+
+    @Override
+    public User selectUserById(int id) {
+        User user = studentDao.selectUserById(id);
+        return user;
+    }
+
+    @Override
+    public User selectOrder(int id) {
+        User user = studentDao.selectOrder(id);
+        return user;
     }
 }
