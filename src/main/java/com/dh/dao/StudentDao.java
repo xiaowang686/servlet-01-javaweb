@@ -7,6 +7,7 @@ import com.dh.entity.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 public interface StudentDao {
 
@@ -19,4 +20,8 @@ public interface StudentDao {
     User selectUserById(int id);
 
     Orders selectOrder(int id);
+
+    User selectUserById2(Map map);
+
+    Map selectUserById3(int id);
 }

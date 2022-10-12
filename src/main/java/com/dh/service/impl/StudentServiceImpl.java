@@ -10,6 +10,7 @@ import com.dh.util.MybatisUtil;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
+import java.util.Map;
 
 public class StudentServiceImpl implements StudentService {
 
@@ -44,5 +45,17 @@ public class StudentServiceImpl implements StudentService {
     public Orders selectOrder(int id) {
         Orders orders = studentDao.selectOrder(id);
         return orders;
+    }
+
+    @Override
+    public User selectUserById2(Map map) {
+        User user = studentDao.selectUserById2(map);
+        return user;
+    }
+
+    @Override
+    public Map selectUserById3(int id) {
+        Map map = studentDao.selectUserById3(id);
+        return map;
     }
 }

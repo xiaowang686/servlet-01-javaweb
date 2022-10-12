@@ -6,6 +6,7 @@ import com.dh.entity.Students;
 import com.dh.entity.User;
 
 import java.util.List;
+import java.util.Map;
 
 public interface StudentService {
 
@@ -18,4 +19,8 @@ public interface StudentService {
     User selectUserById(int id);
 
     Orders selectOrder(int id);
+
+    User selectUserById2(Map map);
+
+    Map selectUserById3(int id);
 }
