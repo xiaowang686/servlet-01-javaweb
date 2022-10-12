@@ -1,5 +1,9 @@
 package com.dh.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Date;
 
 public class Orders {
@@ -8,15 +12,17 @@ public class Orders {
     private Integer user_id;
     private Integer number;
     private Date createtime;
+    private User user;
 
     public Orders() {
     }
 
-    public Orders(Integer id, Integer user_id, Integer number, Date createTime) {
+    public Orders(Integer id, Integer user_id, Integer number, Date createtime, User user) {
         this.id = id;
         this.user_id = user_id;
         this.number = number;
-        this.createtime = createTime;
+        this.createtime = createtime;
+        this.user = user;
     }
 
     public Integer getId() {
@@ -43,12 +49,20 @@ public class Orders {
         this.number = number;
     }
 
-    public Date getCreateTime() {
+    public Date getCreatetime() {
         return createtime;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createtime = createTime;
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
@@ -57,7 +71,8 @@ public class Orders {
                 "id=" + id +
                 ", user_id=" + user_id +
                 ", number=" + number +
-                ", createTime=" + createtime +
+                ", createtime=" + createtime +
+                ", user=" + user +
                 '}';
     }
 }

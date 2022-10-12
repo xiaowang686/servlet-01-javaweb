@@ -1,9 +1,9 @@
 package com.dh.dao;
 
 import com.dh.entity.Orders;
-import com.dh.entity.OrdersUser;
 import com.dh.entity.Student;
 import com.dh.entity.Students;
+import com.dh.entity.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -14,5 +14,9 @@ public interface StudentDao {
 
     List<Student> selectForeach(Student student);
 
-    OrdersUser selectByOrderId(int id);
+    Orders selectByOrderId(int id);
+
+    User selectUserById(int id);
+
+    Orders selectOrder(int id);
 }
