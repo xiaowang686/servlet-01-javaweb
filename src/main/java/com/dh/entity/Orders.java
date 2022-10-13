@@ -3,18 +3,24 @@ package com.dh.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
-
+@Component
 public class Orders {
 
     private Integer id;
     private Integer user_id;
     private Integer number;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createtime;
+
     private User user;
 
     public Orders() {
+        System.out.println("对象创建了");
     }
 
     public Orders(Integer id, Integer user_id, Integer number, Date createtime, User user) {
